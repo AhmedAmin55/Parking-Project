@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:parking_project/view/consts/project_colors.dart';
 
-class CustomRowForSelectMembership extends StatelessWidget {
-  const CustomRowForSelectMembership({
+class CustomRowForChooseService extends StatelessWidget {
+  const CustomRowForChooseService({
     super.key,
     required this.image,
     required this.text,
@@ -21,11 +21,11 @@ class CustomRowForSelectMembership extends StatelessWidget {
         GestureDetector(
           onTap: onTap,
           child: Container(
-            height: 40,
-            width: 250,
+            height: 45,
+            width: 270,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              border: Border.all(color: ProjectColors.mainColor, width: 1.5),
+              color: ProjectColors.mainColor,
+              borderRadius: BorderRadius.circular(5),
             ),
             child: Center(
               child: Text(
@@ -33,7 +33,7 @@ class CustomRowForSelectMembership extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w500,
-                  color: ProjectColors.black,
+                  color: ProjectColors.white,
                 ),
               ),
             ),

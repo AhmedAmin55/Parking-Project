@@ -1,6 +1,7 @@
 import 'package:gap/gap.dart';
 import 'package:flutter/material.dart';
 import 'package:parking_project/view/consts/project_texts.dart';
+import 'package:parking_project/view/choose_service_Screen.dart';
 import 'package:parking_project/view/consts/project_images.dart';
 import 'package:parking_project/view/widgets/custom_row_for_select_member.dart';
 
@@ -20,6 +21,7 @@ class WelcomeScreen extends StatelessWidget {
                 ProjectTexts.welcome,
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.w700),
               ),
+              Gap(10),
 
               CustomRowForSelectMembership(
                 image: ProjectImages.managerIcon,
@@ -27,6 +29,13 @@ class WelcomeScreen extends StatelessWidget {
               ),
               Gap(5),
               CustomRowForSelectMembership(
+                onTap:
+                    () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChooseServiceScreen(),
+                      ),
+                    ),
                 image: ProjectImages.driverIcon,
                 text: ProjectTexts.driver,
               ),
